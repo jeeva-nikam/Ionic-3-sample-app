@@ -1,0 +1,19 @@
+
+<div style="border: 1px solid gray">
+  <p style="margin: 10px;">
+    Hello - {{userName}} <br>
+    Parent Component<br>
+    
+    <button (click)="getSampleData();">Get Data</button>
+  </p>
+  <!-- <pre>{{jsonData | json}}</pre> -->
+  <ul>
+    <li *ngFor="let locaVar of jsonData" >
+       <p *ngIf="locaVar.color == 'red'" [style.color]="locaVar.value">{{locaVar.color}}</p> 
+    </li>
+  </ul>
+
+  <app-comp2 [userName]="userName"></app-comp2>
+</div>
+<br>
+<!-- <a routerLink="/comp2" routerLinkActive="active">Go to Component 2</a> -->
